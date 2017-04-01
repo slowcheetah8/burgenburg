@@ -198,7 +198,8 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            os.path.join(PROJECT_ROOT, "templates")
+            os.path.join(PROJECT_ROOT, "templates"),
+            os.path.join(PROJECT_ROOT, "flat/templates")
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -249,6 +250,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
+    "flat",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
