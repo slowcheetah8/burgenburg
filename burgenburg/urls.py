@@ -9,6 +9,7 @@ from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 
 
+
 admin.autodiscover()
 
 # Add the urlpatterns for any custom Django applications here.
@@ -38,6 +39,7 @@ urlpatterns += [
     # one out.
 
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
+
 
     # HOMEPAGE AS AN EDITABLE PAGE IN THE PAGE TREE
     # ---------------------------------------------
@@ -77,6 +79,7 @@ urlpatterns += [
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
+    # url(r'', include('leaflet_storage.urls')),
     url("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX

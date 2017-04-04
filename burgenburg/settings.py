@@ -140,22 +140,7 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 # DATABASES #
 #############
 
-DATABASES = {
-    "default": {
-        # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.",
-        # DB name or path to database file if using sqlite3.
-        "NAME": "",
-        # Not used with sqlite3.
-        "USER": "",
-        # Not used with sqlite3.
-        "PASSWORD": "",
-        # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "",
-        # Set to empty string for default. Not used with sqlite3.
-        "PORT": "",
-    }
-}
+
 
 
 #########
@@ -231,6 +216,9 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
+    "leaflet_storage",
+    "umap",
+    'django.contrib.gis',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -251,6 +239,8 @@ INSTALLED_APPS = (
     # "mezzanine.accounts",
     # "mezzanine.mobile",
     "flat",
+    #'mapwidgets',
+
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
